@@ -1,0 +1,17 @@
+#!/Users/ryuta/.anyenv/envs/rbenv/shims/ruby
+# frozen_string_literal: true
+
+require 'rest-client'
+require 'uri'
+require 'json'
+
+API_KEY = 'AIzaSyA32aHDl0TpHeyKrpzhoYnVbA5WBwQ7vy0'
+URL = "https://maps.googleapis.com/maps/api/geocode/json?key=#{API_KEY}&address=%s"
+
+address = gets.strip
+address = URI.escape(address)
+escape_url = format(URL, address)
+puts escape_url
+response = RestClient.get(escape_url)
+
+puts response
