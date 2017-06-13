@@ -5,7 +5,7 @@ require 'rest-client'
 require 'uri'
 require 'json'
 
-API_KEY = 'AIzaSyA32aHDl0TpHeyKrpzhoYnVbA5WBwQ7vy0'
+API_KEY = 'APIKEY'
 URL = "https://maps.googleapis.com/maps/api/geocode/json?key=#{API_KEY}&address=%s"
 
 address = gets.strip
